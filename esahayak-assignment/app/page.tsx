@@ -8,6 +8,33 @@ export default function Home() {
   redirect("/buyers");
 }
 
+"use client";
+
+import Link from "next/link";
+
+export default function Home() {
+  return (
+    <main style={{ textAlign: "center", padding: "50px" }}>
+      <h1>Welcome to my E-Sahayak Assignment 🚀</h1>
+      <p>Use the buttons below to navigate:</p>
+
+      <div style={{ marginTop: "20px", display: "flex", gap: "10px", justifyContent: "center" }}>
+        <Link href="/buyers">
+          <button style={{ padding: "10px 20px", borderRadius: "8px", cursor: "pointer" }}>
+            View Buyers
+          </button>
+        </Link>
+
+        <Link href="/buyers/add">
+          <button style={{ padding: "10px 20px", borderRadius: "8px", cursor: "pointer" }}>
+            Add Buyer
+          </button>
+        </Link>
+      </div>
+    </main>
+  );
+}
+
 
 // type Buyer = {
 //   id: string;
